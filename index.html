@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Eats - University Food Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Campus<span>Eats</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#suggestions">Suggestions</a></li>
+                        <li><a href="#data-management">Data Management</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Campus Eats</h1>
+            <p>Your one-stop portal for all cafeteria and tuck shop menus</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title">Today's Menu</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Items</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+                <button class="category-btn" data-category="dinner">Dinner</button>
+                <button class="category-btn" data-category="snacks">Snacks</button>
+                <button class="category-btn" data-category="beverages">Beverages</button>
+            </div>
+            
+            <div class="menu-grid" id="menu-items">
+                <!-- Menu items will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="suggestions" class="section" style="background-color: #f0f5f9;">
+        <div class="container">
+            <h2 class="section-title">Suggestions & Improvements</h2>
+            
+            <div class="suggestions-form">
+                <div class="form-group">
+                    <label for="suggestion-type" class="form-label">Suggestion Type</label>
+                    <select id="suggestion-type" class="form-input">
+                        <option value="">Select a category</option>
+                        <option value="new-item">New Food Item</option>
+                        <option value="improvement">Service Improvement</option>
+                        <option value="facility">Facility Upgrade</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="suggestion-title" class="form-label">Title</label>
+                    <input type="text" id="suggestion-title" class="form-input" placeholder="Brief title for your suggestion">
+                </div>
+                
+                <div class="form-group">
+                    <label for="suggestion-details" class="form-label">Details</label>
+                    <textarea id="suggestion-details" class="form-textarea" placeholder="Please provide details about your suggestion..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestion-image" class="form-label">Upload Image (Optional)</label>
+                    <input type="file" id="suggestion-image" class="form-input" accept="image/*">
+                    <small>Supported formats: JPG, PNG, GIF (Max 2MB)</small>
+                </div>
+                
+                <button id="submit-suggestion" class="submit-btn">Submit Suggestion</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-management" class="section">
+        <div class="container">
+            <h2 class="section-title">Data Management</h2>
+            
+            <div class="data-actions">
+                <button id="export-data" class="action-btn">Export Data</button>
+                <button id="import-data" class="action-btn">Import Data</button>
+                <button id="clear-data" class="action-btn clear">Clear All Data</button>
+            </div>
+            
+            <div class="data-preview">
+                <h3>Stored Data Preview</h3>
+                <div class="data-cards">
+                    <div class="data-card">
+                        <h4>Menu Items</h4>
+                        <div id="menu-data-preview" class="data-content">
+                            <!-- Menu data will be displayed here -->
+                        </div>
+                    </div>
+                    <div class="data-card">
+                        <h4>Suggestions</h4>
+                        <div id="suggestions-data-preview" class="data-content">
+                            <!-- Suggestions data will be displayed here -->
+                        </div>
+                    </div>
+                    <div class="data-card">
+                        <h4>Reviews</h4>
+                        <div id="reviews-data-preview" class="data-content">
+                            <!-- Reviews data will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Campus<span>Eats</span></div>
+                
+                <div class="footer-links">
+                    <a href="#menu">Menu</a>
+                    <a href="#suggestions">Suggestions</a>
+                    <a href="#data-management">Data Management</a>
+                </div>
+                
+                <p class="copyright">&copy; 2023 Campus Eats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
